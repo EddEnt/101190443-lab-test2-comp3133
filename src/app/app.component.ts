@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SpacexapiService } from './spacexapi/spacexapi.service'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '101190443-lab-test2-comp3133';
+  title = 'COMP3133 - FullStack Lab Test 2';
+
 }

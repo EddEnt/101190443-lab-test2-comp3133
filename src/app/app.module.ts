@@ -1,18 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MissionlistComponent } from './missionlist/missionlist.component';
+import { MissiondetailsComponent } from './missiondetails/missiondetails.component';
+import { SpacexapiService } from './spacexapi/spacexapi.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MissionlistComponent,
+    MissiondetailsComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatListModule,
+    MatTableModule,
+    MatButtonModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [SpacexapiService],
+  bootstrap: [AppComponent],
 })
+
 export class AppModule { }
